@@ -238,8 +238,7 @@ for city_row in city_parse.find_all("tr", Recursive=False):
 					  "  july, august, september, october, november, december)"
 					  " values ('" + str(city_id) + "', %s, %s, %s, %s, %s, %s, %s, "
 					  "%s, %s, %s, %s, %s)")
-		print(table_list[list_num])
-		print(climate_data_list[list_num])
+		
 		cursor.execute(insert_sql, climate_data_list[list_num])
 		cnx.commit()
 
